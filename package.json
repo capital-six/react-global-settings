@@ -1,6 +1,6 @@
 {
   "name": "react-global-settings",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A lightweight React hook for loading and globally caching typed app settings from /settings.json.",
   "license": "MIT",
   "type": "module",
