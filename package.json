@@ -1,5 +1,5 @@
 {
-  "name": "react-global-settings",
+  "name": "capitalsix-react-settings",
   "version": "0.1.1",
   "description": "A lightweight React hook for loading and globally caching typed app settings from /settings.json.",
   "license": "MIT",
@@ -26,6 +26,14 @@
   "repository": {
     "url": "https://github.com/capital-six/react-global-settings"
   },
+  "keywords": [
+    "react",
+    "settings",
+    "global",
+    "cache",
+    "hook",
+    "typescript"
+  ],
   "ignore": [
     "src/",
     "node_modules/",
@@ -41,8 +49,7 @@
   },
   "peerDependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-global-state-factory": "^0.1.2"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.8",
@@ -58,6 +65,7 @@
     "vitest": "^2.1.8"
   },
   "dependencies": {
+    "capitalsix-react-global-state": "^0.1.0",
     "npmignore": "^0.3.5"
   }
 }

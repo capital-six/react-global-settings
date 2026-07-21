@@ -1,4 +1,4 @@
-import { createGlobalState } from 'react-global-state-factory';
+import { createGlobalState } from 'capitalsix-react-global-state';
 
 /**
  * Load the application settings JSON from disk.

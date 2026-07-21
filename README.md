@@ -1,19 +1,30 @@
-# react-global-settings
+# capitalsix-react-settings
 
-`react-global-settings` is a lightweight React hook package for loading and globally caching typed app settings.
+`capitalsix-react-settings` is a lightweight React hook package for loading and globally caching typed app settings.
 
 By default, settings are fetched from `/settings.json` and shared across consumers so they are not re-fetched on every render.
+
+## One Build For All Environments
+
+This package is designed for a single-build deployment model: build your app once, then run the same artifact in development, staging, and production.
+
+Using one build for all environments is usually better because it reduces release risk and operational complexity:
+
+- The exact same code is promoted across environments.
+- Environment differences live in runtime configuration (`/settings.json`), not in separate build outputs.
+- CI/CD pipelines stay simpler because you avoid per-environment rebuilds.
+- Debugging is easier because behavior differences are tied to settings, not to different bundles.
 
 ## Install
 
 ```bash
-npm install react-global-settings
+npm install capitalsix-react-settings
 ```
 
 ## Usage
 
 ```tsx
-import { useSettings } from 'react-global-settings';
+import { useSettings } from 'capitalsix-react-settings';
 
 type AppSettings = {
   apiUrl: string;
@@ -34,7 +45,7 @@ export function Example() {
 ### 1) Nested settings object
 
 ```tsx
-import { useSettings } from 'react-global-settings';
+import { useSettings } from 'capitalsix-react-settings';
 
 type AppSettings = {
   api: {
@@ -63,7 +74,7 @@ export function ApiInfo() {
 ### 2) Create a domain-specific hook
 
 ```tsx
-import { useSettings } from 'react-global-settings';
+import { useSettings } from 'capitalsix-react-settings';
 
 type AppSettings = {
   apiUrl: string;
@@ -88,7 +99,7 @@ export function TelemetryBadge() {
 Because settings are globally cached, multiple components can read them without triggering extra fetches.
 
 ```tsx
-import { useSettings } from 'react-global-settings';
+import { useSettings } from 'capitalsix-react-settings';
 
 type AppSettings = {
   apiUrl: string;
